@@ -57,7 +57,7 @@ XF86AudioMute
     amixer -q set Master toggle
 # Lower Volume
 XF86AudioLowerVolume
-    changeVolume -2% unmute
+    changeVolume 2%- unmute
 # Raise Volume
 XF86AudioRaiseVolume
     changeVolume 2%+ unmute
