@@ -17,6 +17,7 @@
 - Bspwm
 - Sxhkd
 - Feh
+- Dunst
 
 ## Instructions
 Type `git clone --bare https://github.com/Mcpower03/Dotfiles.git ~/.dotfiles`  
