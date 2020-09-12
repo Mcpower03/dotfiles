@@ -4,6 +4,7 @@
 - Curl
 - Bash
 - NodeJS
+- Picom
 
 ## Included App Configs
 - Vim
