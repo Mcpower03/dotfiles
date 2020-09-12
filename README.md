@@ -27,4 +27,3 @@ Add following to alias Bash/Zsh/Etc config `alias dotfiles='/usr/bin/git --git-d
 Run `dotfiles checkout`  
 Fix any existing file errors and run again if needed  
 Run `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k` to setup powerlevel zsh prompt  
-Install JetbrainMono Nerd font  
