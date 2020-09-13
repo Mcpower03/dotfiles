@@ -10,6 +10,7 @@ nm-applet &
 killall pasystray
 pasystray &
 dunst &
+udiskie --tray &
 
 ## Configure Monitors/Workspaces
 bspc monitor HDMI-0 -d Web Term School Game Music Chat Sys Dev Extra
