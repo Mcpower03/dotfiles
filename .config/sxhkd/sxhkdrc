@@ -150,6 +150,10 @@ super + {o,i}
 # Switch Focus of Monitors
 super + ctrl + alt {h,l}
     bspc monitor --focus {prev,next}
+super + shift {comma,period}
+	bspc monitor --focus {prev,next}
 # Send Window to other monitor
 super + ctrl + shift {h,l}
     bspc node -m {prev,next} --follow 
+super + ctrl {comma,period}
+	bspc node -m {prev,next} --follow
