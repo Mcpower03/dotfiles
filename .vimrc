@@ -1,5 +1,7 @@
 "Turns Off Vi Compatibility
 set nocompatible
+"Disables special character rendering at end of line
+set nolist
 "Allows Buffers to Be Hidden Without Being Saved
 set hidden
 "Disables Backup Files (Preferable For Coc)
@@ -24,7 +26,7 @@ set softtabstop=4
 "Enables Mouse Support
 set mouse=a
 "Needed For Proper Mouse Support In Alacritty
-set ttymouse=sgr
+"set ttymouse=sgr
 "Set a couple Search Options
 set ic
 set incsearch
