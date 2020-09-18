@@ -5,6 +5,8 @@
 - Bash
 - NodeJS
 - Picom
+- zsh-syntax-highlighting
+- zsh-autosuggestions
 
 ## Included App Configs
 - Vim
