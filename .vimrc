@@ -121,6 +121,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "CtrlP Stuff
 let g:ctrlp_working_path_mode = 'cra'
 nmap <C-o> :CtrlP /<CR>
+nmap <Leader>p :CtrlPBuffer<CR>
+nmap <Leader>a :CtrlPMixed
 "Clear Highlight Search on Press Of Ctrl X
 nmap <C-x> :nohlsearch<CR>
 "Disable Autocommenting
