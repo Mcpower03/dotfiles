@@ -49,6 +49,9 @@ super + ctrl + r
 # Vim
 super + ctrl + v
     kitty -e vim
+# Emacs
+super + ctrl + e
+    emacs
 
 # Media Controls
 
