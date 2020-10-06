@@ -41,7 +41,10 @@ Plug 'airblade/vim-gitgutter'
 
 "Status Line
 "Lightline Status Bar Plugin
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
+"Airline Status Bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "Surround
 Plug 'tpope/vim-surround'
@@ -70,6 +73,12 @@ Plug 'yggdroot/indentline'
 "Search
 "CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
+
+"Startup Screen
+Plug 'mhinz/vim-startify'
+
+"Colors
+Plug 'norcalli/nvim-colorizer.lua'
 
 "Icons
 Plug 'ryanoasis/vim-devicons'
@@ -126,6 +135,11 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+"Needed for colorizer
+set termguicolors
+"Colorizer Enable
+lua require'colorizer'.setup()
+
 "Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -166,6 +180,21 @@ set noshowmode
 let g:lightline = {
     \ 'colorscheme': 'onedark',
     \}
+"Airline Settings
+"Enable tabline
+let g:airline#extensions#tabline#enabled = 1
+let airline#extensions#tabline#show_splits = 0
+let airline#extensions#tabline#tabs_label = ''
+"Disable tabline close button
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+"Enable powerline fonts
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+" Always show tabs
+set showtabline=2
+let g:webdevicons_enable_airline_tabline = 1
 
 "Remap leader to space
 let mapleader = ' '
@@ -182,11 +211,20 @@ nmap <C-o> :CtrlP /<CR>
 nmap <Leader>p :CtrlPBuffer<CR>
 nmap <Leader>a :CtrlPMixed<CR>
 
-"Buffer settings
+"Git Stuff
+let g:gitgutter_realtime = 1200
+let g:gitgutter_map_keys = 0
+
+"Buffer & Tab settings
 "List Buffers On Press of Leader B
 nnoremap <Leader>b :ls<CR>:buffer<Space>
 "Close Buffers With Leader X
 nnoremap <Leader>x :ls<CR>:bdelete<Space>
+"Move Between Buffers & Tabs with Leader H & L
+map <Leader>L :tabn<CR>
+map <Leader>H :tabp<CR>
+map <Leader>l :bn<CR>
+map <Leader>h :bp<CR>
 
 "Split to the right instead of the left
 set splitright
@@ -203,6 +241,7 @@ map <C-w>tv :vsplit term://zsh<CR>
 map <Leader>vt :vsplit term://zsh<CR>
 map <C-w>ts :split term://zsh<CR>
 map <Leader>st :split term://zsh<CR>
+map <Leader>t :term://zsh<CR>
 
 "Splits
 map <Leader>v :vsplit<CR>
@@ -266,3 +305,27 @@ endif
 "set runtimepath^=~/.vim runtimepath+=~/.vim/after
 "let &packpath=&runtimepath
 "source ~/.vimrc
+
+" Startify options
+let g:startify_custom_header = [
+	\ ' =================     ===============     ===============   ========  ======== ',
+	\ ' \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . // ',
+	\ ' ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .|| ',
+	\ ' || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . || ',
+	\ ' ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .|| ',
+	\ ' || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . || ',
+	\ ' ||. . ||   ||-   || ||  `-||   || . .|| ||. . ||   ||-   || ||  `|\_ . .|. .|| ',
+	\ ' || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . || ',
+	\ ' ||_-  ||  .|/    || ||    \|.  || `-_|| ||_-  ||  .|/    || ||   | \  / |-_.|| ',
+	\ ' ||    ||_-       || ||      `-_||    || ||    ||_-       || ||   | \  / |  `|| ',
+	\ ' ||    `          || ||         `     || ||    `          || ||   | \  / |   || ',
+	\ ' ||            .===  `===.         .=== .`===.         .===  /==. |  \/  |   || ',
+	\ ' ||         .==    \_|-_ `===. .===    _|_   `===. .===  _-|/   `==  \/  |   || ',
+	\ ' ||      .==     _-     `-_  `=     _-    `-_    `=   _-    `-_  /|  \/  |   || ',
+	\ ' ||   .==     _-           `-__\._-          `-_./__-          `  |. /|  |   || ',
+	\ ' ||.==     _-                                                      `  |  /==.|| ',
+	\ ' ==     _-                         N E O V I M                         \/   `== ',
+	\ ' \   _-                                                                 `-_   / ',
+	\ '  ``                                                                       ``   ',
+	\ ]
+
