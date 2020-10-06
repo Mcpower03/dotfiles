@@ -37,6 +37,7 @@ Plug 'flazz/vim-colorschemes'
 
 "Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 "Status Line
 "Lightline Status Bar Plugin
@@ -166,6 +167,9 @@ let g:lightline = {
     \ 'colorscheme': 'onedark',
     \}
 
+"Remap leader to space
+let mapleader = ' '
+
 "NerdTree Stuff
 nmap <C-n> :NERDTreeToggle<CR> 
 autocmd StdinReadPre * let s:std_in=1
@@ -186,6 +190,7 @@ nnoremap <Leader>x :ls<CR>:bdelete<Space>
 
 "Split to the right instead of the left
 set splitright
+set splitbelow
 
 "Goyo (Relax Mode) Toggle
 map <Leader>gy :Goyo<CR>
@@ -195,7 +200,20 @@ let g:AutoPairsMapCR = 0
 
 "Terminal
 map <C-w>tv :vsplit term://zsh<CR>
+map <Leader>vt :vsplit term://zsh<CR>
 map <C-w>ts :split term://zsh<CR>
+map <Leader>st :split term://zsh<CR>
+
+"Splits
+map <Leader>v :vsplit<CR>
+map <Leader>s :split<CR>
+
+"Save & Quit
+map <Leader>q :q!<CR>
+map <Leader>w :w<CR>
+map <Leader>wq :wq<CR>
+map <Leader>e :w 
+
 "COC Settings
 "Goto Code Navigation
 nmap <silent> gd <Plug>(coc-definition)
