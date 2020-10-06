@@ -18,11 +18,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 alias update-config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status
 echo "Commit Message: "
 read message
 /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m $message
-/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push
-'
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push'
+
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 source ~/powerlevel10k/powerlevel10k.zsh-theme
