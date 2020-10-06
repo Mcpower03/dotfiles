@@ -35,6 +35,9 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 "Colorscheme Pack
 Plug 'flazz/vim-colorschemes'
 
+"Git
+Plug 'tpope/vim-fugitive'
+
 "Status Line
 "Lightline Status Bar Plugin
 Plug 'itchyny/lightline.vim'
@@ -63,6 +66,7 @@ Plug 'luochen1990/rainbow'
 "Indent Lines Indicators
 Plug 'yggdroot/indentline'
 
+"Search
 "CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -180,12 +184,18 @@ nnoremap <Leader>b :ls<CR>:buffer<Space>
 "Close Buffers With Leader X
 nnoremap <Leader>x :ls<CR>:bdelete<Space>
 
+"Split to the right instead of the left
+set splitright
+
 "Goyo (Relax Mode) Toggle
 map <Leader>gy :Goyo<CR>
 
 "Disable Enter Functionality Of Auto Pairs
 let g:AutoPairsMapCR = 0
 
+"Terminal
+map <C-w>tv :vsplit term://zsh<CR>
+map <C-w>ts :split term://zsh<CR>
 "COC Settings
 "Goto Code Navigation
 nmap <silent> gd <Plug>(coc-definition)
