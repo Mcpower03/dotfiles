@@ -31,7 +31,7 @@ set mouse=a
 set ic
 set incsearch
 set hlsearch
-"Coomand Auto Complete Menu
+"Command Auto Complete Menu
 set wildmenu
 set wildmode=full
 "Vim Plug Auto Installer

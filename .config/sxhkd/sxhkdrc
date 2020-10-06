@@ -46,9 +46,9 @@ super + ctrl + c
 # Ranger
 super + ctrl + r
     kitty -e ranger
-# Vim
+# NeoVim
 super + ctrl + v
-    kitty -e vim
+    kitty -e nvim
 # Emacs
 super + ctrl + e
     emacs
