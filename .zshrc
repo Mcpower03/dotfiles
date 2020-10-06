@@ -26,3 +26,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 source /home/mikec/.config/broot/launcher/bash/br
 export PATH="${PATH}:$HOME/.scripts:$HOME/.emacs.d/bin"
+alias vim='/usr/bin/nvim'
