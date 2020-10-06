@@ -241,7 +241,7 @@ map <C-w>tv :vsplit term://zsh<CR>
 map <Leader>vt :vsplit term://zsh<CR>
 map <C-w>ts :split term://zsh<CR>
 map <Leader>st :split term://zsh<CR>
-map <Leader>t :term://zsh<CR>
+map <Leader>t :term<CR>
 
 "Splits
 map <Leader>v :vsplit<CR>
