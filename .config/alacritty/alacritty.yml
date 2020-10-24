@@ -1,21 +1,21 @@
 font:
   normal:
-    family: JetbrainsMono NF
+    family: Iosevka Term
     style: Regular
 
   bold:
-    family: JetbrainsMono NF
+    family: Iosevka Term
     style: Bold
 
   italic:
-    family: JetbrainsMono NF
+    family: Iosevka Term
     style: Italic
 
   bold_italic:
-    family: JetbrainsMono NF
+    family: Iosevka Term
     style: Bold Italic
 
-  size: 11
+  size: 14
   # shell:
   #   program: /bin/zsh
   #   args:
