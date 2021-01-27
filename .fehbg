@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-tile '/home/mikec/Pictures/miata_wallpaper.png' 
+feh --no-fehbg --bg-center '/home/mikec/Downloads/qwe_download.jpg' 

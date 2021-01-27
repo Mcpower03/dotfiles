@@ -168,9 +168,9 @@ let g:edge_style = 'neon'
 "Italics For Palenight Colorscheme
 let g:palenight_terminal_italics=1
 "Sets colorscheme
-colorscheme nord
+colorscheme dracula
 "Airline Colorscheme
-let g:airline_theme='base16_nord'
+let g:airline_theme='dracula'
 "Enables Rainbow Brackets
 let g:rainbow_active = 1
 "Status Bar Settings
