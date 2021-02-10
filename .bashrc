@@ -134,3 +134,4 @@ if ! shopt -oq posix; then
 fi
 
 source /home/mikec/.config/broot/launcher/bash/br
+source "$HOME/.cargo/env"

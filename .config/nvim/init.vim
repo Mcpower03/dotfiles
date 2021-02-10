@@ -49,6 +49,9 @@ Plug 'vim-airline/vim-airline-themes'
 "Surround
 Plug 'tpope/vim-surround'
 
+"Commenting
+Plug 'tpope/vim-commentary'
+
 "Nerd Tree
 "Nerd Tree File Manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -56,8 +59,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'xuyuanp/nerdtree-git-plugin'
 
 "Language Stuff
-"VSCode Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Syntax Checking Plugin
 "Plug 'scrooloose/syntastic'
 
@@ -249,65 +250,13 @@ map <Leader>t :term<CR>
 "Splits
 map <Leader>v :vsplit<CR>
 map <Leader>s :split<CR>
+map <Leader>c :close<CR>
 
 "Save & Quit
 map <Leader>q :q!<CR>
 map <Leader>w :w<CR>
 map <Leader>wq :wq<CR>
 map <Leader>e :w 
-
-"COC Settings
-"Goto Code Navigation
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-          " Recently vim can merge signcolumn and number column into one
-            set signcolumn=number
-    else
-              set signcolumn=yes
-      endif
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? replace me"\<C-n>" :
-"      \ <SID>check_back_space() ? replace me"\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? replace me"\<C-p>" : replace me"\<C-h>"
-"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-
-""See invisible characters
-"set list listchars=tab:>\ ,trail:+,eol:$
-"set runtimepath^=~/.vim runtimepath+=~/.vim/after
-"let &packpath=&runtimepath
-"source ~/.vimrc
 
 " Startify options
 let g:startify_custom_header = [

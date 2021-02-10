@@ -34,3 +34,8 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /home/mikec/.config/broot/launcher/bash/br
 export PATH="${PATH}:$HOME/.scripts:$HOME/.emacs.d/bin"
 alias vim='/usr/bin/nvim'
+alias ls='/usr/bin/exa'
+alias cat='/usr/bin/bat'
+alias grep='/usr/bin/rg'
+alias find='/usr/bin/fd'
+alias mingw='/usr/bin/x86_64-w64-mingw32-gcc'
