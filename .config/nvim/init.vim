@@ -32,6 +32,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 "Onehalf Colorscheme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+"Gruvbox
+Plug 'morhetz/gruvbox'
 "Colorscheme Pack
 Plug 'flazz/vim-colorschemes'
 
@@ -167,13 +169,18 @@ let g:onedark_terminal_italics=1
 "Settings For Edge Colorscheme
 let g:edge_style = 'neon'
 "Italics For Palenight Colorscheme
-let g:palenight_terminal_italics=1
 "Sets colorscheme
-colorscheme dracula
+colorscheme gruvbox
 "Airline Colorscheme
-let g:airline_theme='dracula'
+let g:airline_theme='gruvbox'
 "Enables Rainbow Brackets
 let g:rainbow_active = 1
+"Gruvbox Theme Settings
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_contrast = 'soft'
+
 "Status Bar Settings
 
 "Needed to get Lightline Status Bar
@@ -246,6 +253,9 @@ map <Leader>vt :vsplit term://zsh<CR>
 map <C-w>ts :split term://zsh<CR>
 map <Leader>st :split term://zsh<CR>
 map <Leader>t :term<CR>
+"Map ESC to exit insert mode for terminal
+tnoremap <Esc> <C-\><C-n>
+
 
 "Splits
 map <Leader>v :vsplit<CR>
