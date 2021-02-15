@@ -127,7 +127,7 @@ set ic
 set incsearch
 set hlsearch
 "Clear Highlight Search on Press Of Ctrl X
-nmap <C-x> :nohlsearch<CR>
+map <C-x> :nohlsearch<CR>
 
 "Command Auto Complete Menu
 set wildmenu
@@ -179,7 +179,7 @@ let g:rainbow_active = 1
 let g:gruvbox_bold = 1
 let g:gruvbox_italic = 1
 let g:gruvbox_underline = 1
-let g:gruvbox_contrast = 'soft'
+let g:gruvbox_contrast_dark = 'soft'
 
 "Status Bar Settings
 
@@ -231,6 +231,8 @@ let g:gitgutter_map_keys = 0
 nnoremap <Leader>b :ls<CR>:buffer<Space>
 "Close Buffers With Leader X
 nnoremap <Leader>x :ls<CR>:bdelete<Space>
+"Close Current Buffer with Leader D
+nnoremap <Leader>d :bdelete<CR>
 "Move Between Buffers & Tabs with Leader H & L
 map <Leader>L :tabn<CR>
 map <Leader>H :tabp<CR>
