@@ -169,17 +169,18 @@ let g:onedark_terminal_italics=1
 "Settings For Edge Colorscheme
 let g:edge_style = 'neon'
 "Italics For Palenight Colorscheme
+"Gruvbox Theme Settings
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'soft'
 "Sets colorscheme
 colorscheme gruvbox
 "Airline Colorscheme
 let g:airline_theme='gruvbox'
 "Enables Rainbow Brackets
 let g:rainbow_active = 1
-"Gruvbox Theme Settings
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_underline = 1
-let g:gruvbox_contrast_dark = 'soft'
 
 "Status Bar Settings
 
