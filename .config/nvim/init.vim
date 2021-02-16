@@ -233,7 +233,7 @@ nnoremap <Leader>b :ls<CR>:buffer<Space>
 "Close Buffers With Leader X
 nnoremap <Leader>x :ls<CR>:bdelete<Space>
 "Close Current Buffer with Leader D
-nnoremap <Leader>d :bdelete<CR>
+nnoremap <Leader>d :bdelete!<CR>
 "Move Between Buffers & Tabs with Leader H & L
 map <Leader>L :tabn<CR>
 map <Leader>H :tabp<CR>
@@ -244,32 +244,34 @@ map <Leader>h :bp<CR>
 set splitright
 set splitbelow
 
-"Goyo (Relax Mode) Toggle
-map <Leader>gy :Goyo<CR>
-
-"Disable Enter Functionality Of Auto Pairs
-let g:AutoPairsMapCR = 0
-
 "Terminal
-map <C-w>tv :vsplit term://zsh<CR>
-map <Leader>vt :vsplit term://zsh<CR>
-map <C-w>ts :split term://zsh<CR>
-map <Leader>st :split term://zsh<CR>
+map <C-w>tv :vsplit term://fish<CR>
+map <Leader>vt :vsplit term://fish<CR>
+map <C-w>ts :split term://fish<CR>
+map <Leader>st :split term://fish<CR>
 map <Leader>t :term<CR>
 "Map ESC to exit insert mode for terminal
 tnoremap <Esc> <C-\><C-n>
-
 
 "Splits
 map <Leader>v :vsplit<CR>
 map <Leader>s :split<CR>
 map <Leader>c :close<CR>
 
+"Windows
+" nmap <Leader>w <C-w>
+" vmap <Leader>w <C-w>
+
+
 "Save & Quit
-map <Leader>q :q!<CR>
-map <Leader>w :w<CR>
-map <Leader>wq :wq<CR>
-map <Leader>e :w 
+nmap <Leader>q :q!<CR>
+" map <Leader>w :w<CR>
+" map <Leader>wq :wq<CR>
+" map <Leader>e :w 
+
+
+"Disable Enter Functionality Of Auto Pairs
+let g:AutoPairsMapCR = 0
 
 " Startify options
 let g:startify_custom_header = [
