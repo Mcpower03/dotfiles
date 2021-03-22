@@ -1,4 +1,4 @@
- "--- Mcpower03 Neovim Config ---
+ "--- namespace-miata Neovim Config ---
 
 
 " Enables iMproved Features
@@ -176,9 +176,9 @@ let g:gruvbox_underline = 1
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_contrast_light = 'soft'
 "Sets colorscheme
-colorscheme gruvbox
+colorscheme dracula
 "Airline Colorscheme
-let g:airline_theme='gruvbox'
+let g:airline_theme='dracula'
 "Enables Rainbow Brackets
 let g:rainbow_active = 1
 
