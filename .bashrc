@@ -59,7 +59,7 @@ force_color_prompt=yes
 #fi
 #
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[32m\]\u\[\033[00m\]\100\[\033[00m\]\h \[\033[32m\]\w\[\033[01;00m\]> '; else PS1='\[\033[32m\]\u\[\033[00m\]\100\[\033[00m\]\h \[\033[32m\]\w\[\033[01;00m\]> '
+    PS1='\[\033[0;32m\]\u\[\033[00m\]\100\[\033[00m\]\h \[\033[0;32m\]\w\[\033[01;00m\]> '; else PS1='\[\033[0;32m\]\u\[\033[00m\]\100\[\033[00m\]\h \[\033[0;32m\]\w\[\033[01;00m\]> '
 #else
 #    PS1='\u\100\h \w> '
 fi
@@ -138,7 +138,7 @@ source "$HOME/.cargo/env"
 
 alias update-config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
 /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status
-echo "Commit Message: "
+echo -n "Commit Message: "
 read message
 /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m ${message}
 /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push'

@@ -26,15 +26,15 @@ super + ctrl + {m,x,y,z}
 
 # Launch Programs
 
-# Firefox
+# Brave
 super + ctrl + f
-    firefox
+    brave
 # PCManFM
-super + ctrl + b
-    pcmanfm
-# Rofi Launcher
+#super + ctrl + b
+#    pcmanfm
+# dmenu Launcher
 super + Tab
-    rofi -show run	
+    demnu
 # Terminal
 super + Return
 	kitty
@@ -50,20 +50,20 @@ super + ctrl + r
 super + ctrl + v
     kitty -e nvim
 # Emacs
-super + ctrl + e
-    emacs
+#super + ctrl + e
+#    emacs
 
 # Media Controls
 
 # Mute Audio
 XF86AudioMute
-    amixer -q set Master toggle
+    pulse-ctl mute
 # Lower Volume
 XF86AudioLowerVolume
-    changeVolume 2%- unmute
+    pulse-ctl down 5
 # Raise Volume
 XF86AudioRaiseVolume
-    changeVolume 2%+ unmute
+    pulse-ctl up 5
 # Play/Pause
 XF86AudioPlay
     playerctl play-pause

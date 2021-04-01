@@ -36,6 +36,9 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
 "Colorscheme Pack
 Plug 'flazz/vim-colorschemes'
+"Monokai Themes
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'phanviet/vim-monokai-pro'
 
 "Git
 Plug 'tpope/vim-fugitive'
@@ -169,12 +172,15 @@ let g:onedark_terminal_italics=1
 "Settings For Edge Colorscheme
 let g:edge_style = 'neon'
 "Italics For Palenight Colorscheme
+let g:palenight_terminal_italics=1
 "Gruvbox Theme Settings
 let g:gruvbox_bold = 1
 let g:gruvbox_italic = 1
 let g:gruvbox_underline = 1
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_contrast_light = 'soft'
+"Monokai Theme Settings
+let g:vim_monokai_tasty_italic = 1
 "Sets colorscheme
 colorscheme dracula
 "Airline Colorscheme

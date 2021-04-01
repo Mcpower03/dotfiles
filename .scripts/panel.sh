@@ -13,5 +13,3 @@ if type "xrandr"; then
 else
   polybar --reload example &
 fi
-
-echo "Bars launched..."

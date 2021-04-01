@@ -80,8 +80,8 @@ label = %title:0:30:...%
 type = internal/bspwm
 
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+#label-focused-background = ${colors.background-alt}
+label-focused-underline= #ffffff
 label-focused-padding = 2
 label-focused-font = 2
 
@@ -90,12 +90,12 @@ label-occupied-padding = 2
 label-occupied-font = 2
 
 label-urgent = %name%!
-label-urgent-background = ${colors.alert}
+#label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 label-urgent-font = 2
 
 label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
+#label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 label-empty-font = 2
 ;extra icons to choose from
@@ -114,9 +114,9 @@ ws-icon-8 = Extra;
 ;ws-icon-9 = 10;
 ws-icon-default = " "
 
-; Separator in between workspaces
-; label-separator = |
-
+#; Separator in between workspaces
+#; label-separator = |
+#
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -214,11 +214,11 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98
+#[module/battery]
+#type = internal/battery
+#battery = BAT0
+#adapter = ADP1
+#full-at = 98
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
@@ -308,3 +308,60 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+[bar/mainbar]
+monitor = "DP-2"
+background = #20ffffff
+foreground = #ffffff
+font-0 = SF Pro Text:style=Medium:pixelsize=11;2
+font-1 = Font Awesome 5 Free Solid:style=Regular:size=9;2
+font-2 = Font Awesome 5 Brands:style=Regular:size=13;2
+height = 20
+line-size = 2
+modules-left = bspwm
+modules-right = battery network redshift datetime
+padding = 3
+module-margin = 1.5
+
+[module/apple]
+type = custom/text
+content =  
+
+#[module/bspwm]
+#type = internal/bspwm
+#label-focused-underline = #FFFFFF
+#strip-wsnumber = true
+#label-mode-padding = 1
+#label-focused = %name%
+#label-unfocused = %name%
+#label-focused-padding = 1
+#label-unfocused-padding = 2
+#enable-scroll = false
+#reverse-scroll = false
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP0
+format-charging = <ramp-capacity>
+format-discharging = <ramp-capacity>
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+
+[module/network]
+type = internal/network
+interface = enp4s0
+label-disconnected = " Not connected" 
+label-connected = ""
+
+[module/redshift]
+type = custom/text
+content = 
+click-left = redshift -O 4300
+click-right = redshift -x
+
+[module/datetime]
+type = internal/date
+date = %a %b %d  %H:%M %p

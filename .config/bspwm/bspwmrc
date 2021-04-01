@@ -3,23 +3,20 @@
 ## Autostart Programs
 sxhkd &
 # polybar example &
-~/.scripts/panel.sh
+#~/.scripts/panel.sh
+killall polybar
+polybar mainbar &
+#MONITOR=DP-5 polybar example &
 ~/.fehbg
-picom -b
-nm-applet &
-killall pasystray
-killall udiskie
-pasystray &
-dunst &
-udiskie --tray &
+picom -b --experimental-backends
 
 ## Configure Monitors/Workspaces
-bspc monitor HDMI-0 -d Web Term School Game Music Chat Sys Dev Extra
-bspc monitor DP-3 -d Web Term School Game Music Chat Sys Dev Extra
+bspc monitor DP-2 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-5 -d Web Term School Game Music Chat Sys Dev Extra
 
 ## Theming
-bspc config border_width        1
-bspc config window_gap          0
+bspc config border_width        0
+bspc config window_gap          12
 bspc config top_padding         20
 bspc config left_padding        0
 bspc config right_padding       0
@@ -43,8 +40,8 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Emacs state=tiled
 
 # Polybar Hidden When Fullscreen for Vlc, Youtube, Mpv ...
-xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DP-3)
-xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-0)
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DP-5)
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DP-2)
 
 ## Make Focus Follow Cursor
 bspc config focus_follows_pointer true
