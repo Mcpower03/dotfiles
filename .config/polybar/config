@@ -318,7 +318,7 @@ font-2 = Font Awesome 5 Brands:style=Regular:size=13;2
 height = 20
 line-size = 2
 modules-left = bspwm
-modules-right = battery network redshift datetime
+modules-right = music battery network redshift datetime
 padding = 3
 module-margin = 1.5
 
@@ -337,6 +337,11 @@ content = 
 #label-unfocused-padding = 2
 #enable-scroll = false
 #reverse-scroll = false
+
+[module/music]
+type = custom/script
+exec = /home/mikec/.scripts/get_song.sh
+interval = 1
 
 [module/battery]
 type = internal/battery

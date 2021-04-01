@@ -34,21 +34,23 @@ super + ctrl + f
 #    pcmanfm
 # dmenu Launcher
 super + Tab
-    demnu
+    dmenu_run
+super + p
+    dmenu_run
 # Terminal
 super + Return
-	kitty
+	alacritty
 super + x
-    kitty
+    alacritty
 # Cmus
 super + ctrl + c
-    kitty -e cmus
+    alacritty -e cmus
 # Ranger
 super + ctrl + r
-    kitty -e ranger
+    alacritty -e ranger
 # NeoVim
 super + ctrl + v
-    kitty -e nvim
+    alacritty -e nvim
 # Emacs
 #super + ctrl + e
 #    emacs
