@@ -27,20 +27,20 @@ super + ctrl + {m,x,y,z}
 # Launch Programs
 
 # Brave
-super + ctrl + f
+super + ctrl + b
     brave
 # PCManFM
 #super + ctrl + b
 #    pcmanfm
 # dmenu Launcher
 super + Tab
-    dmenu_run
+    dmenu_run -fn 'Iosevka Term SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
 super + p
-    dmenu_run
+    dmenu_run -fn 'Iosevka Term SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
 # Terminal
 super + Return
-	alacritty
-super + x
+    alacritty
+super + d
     alacritty
 # Cmus
 super + ctrl + c
@@ -59,13 +59,13 @@ super + ctrl + v
 
 # Mute Audio
 XF86AudioMute
-    pulse-ctl mute
+    pulseaudio-ctl mute
 # Lower Volume
 XF86AudioLowerVolume
-    pulse-ctl down 5
+    pulseaudio-ctl down 5
 # Raise Volume
 XF86AudioRaiseVolume
-    pulse-ctl up 5
+    pulseaudio-ctl up 5
 # Play/Pause
 XF86AudioPlay
     playerctl play-pause
@@ -91,7 +91,7 @@ super + {Left,Down,Up,Right}
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 # Close and Kill Window
-super + d
+super + x
 	bspc node -{c,k}
 
 # Resize/Rearrange Windows

@@ -253,10 +253,10 @@ set splitright
 set splitbelow
 
 "Terminal
-map <C-w>tv :vsplit term://fish<CR>
-map <Leader>vt :vsplit term://fish<CR>
-map <C-w>ts :split term://fish<CR>
-map <Leader>st :split term://fish<CR>
+map <C-w>tv :vsplit term://bash<CR>
+map <Leader>vt :vsplit term://bash<CR>
+map <C-w>ts :split term://bash<CR>
+map <Leader>st :split term://bash<CR>
 map <Leader>t :term<CR>
 "Map ESC to exit insert mode for terminal
 tnoremap <Esc> <C-\><C-n>
