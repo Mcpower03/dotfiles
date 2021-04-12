@@ -49,9 +49,11 @@ font-2 = Font Awesome 5 Brands:style=Regular:size=13;2
 height = 20
 line-size = 2
 modules-left = bspwm
-modules-right = music pulseaudio battery network redshift datetime powermenu
+modules-right = music pulseaudio battery network redshift datetime
 padding = 3
 module-margin = 1.5
+tray-position = right
+tray-maxsize = 16
 
 [module/apple]
 type = custom/text
