@@ -181,7 +181,7 @@ click-right = redshift -x
 type = internal/date
 date = %a %b %d  %I:%M %p
 
-[module/powermenu]
-type = custom/text
-content = 
-click-left = rofi -show p -modi p:rofi-power-menu -font "Iosevka Term SS12 12" -width 20 -lines 6 --no-symbols
+# [module/powermenu]
+# type = custom/text
+# content = 
+# click-left = rofi -show p -modi p:rofi-power-menu -font "Iosevka Term SS12 12" -width 20 -lines 6 --no-symbols

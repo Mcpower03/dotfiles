@@ -54,6 +54,9 @@ super + ctrl + v
 # Emacs
 #super + ctrl + e
 #    emacs
+# Screenshot
+super + ctrl + s
+    scrot
 
 # Media Controls
 

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-center '/home/mikec/Pictures/Wallpapers/1440p-mountain-wallpaper' 
+feh --no-fehbg --bg-tile '/home/mikec/Pictures/Wallpapers/combined-miata-maverick-sur.png'
