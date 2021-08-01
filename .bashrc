@@ -133,8 +133,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source /home/mikec/.config/broot/launcher/bash/br
-source "$HOME/.cargo/env"
+#source /home/mikec/.config/broot/launcher/bash/br
+#source "$HOME/.cargo/env"
 
 alias update-config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
 /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status
@@ -146,7 +146,7 @@ read message
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 
-source /home/mikec/.config/broot/launcher/bash/br
+#source /home/mikec/.config/broot/launcher/bash/br
 export PATH="${PATH}:$HOME/.scripts:$HOME/.emacs.d/bin"
 alias vim='/usr/bin/nvim'
 alias ls='/usr/bin/exa'
