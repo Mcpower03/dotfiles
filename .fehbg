@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-tile '/home/mikec/Pictures/Wallpapers/combined-miata-maverick-sur.png'
+feh --no-fehbg --bg-scale '/home/mikec/.cache/styli.sh/wallpaper.jpg' 

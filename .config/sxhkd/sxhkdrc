@@ -34,9 +34,9 @@ super + ctrl + b
 #    pcmanfm
 # dmenu Launcher
 super + Tab
-    dmenu_run -fn 'Iosevka Term SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
+    dmenu_run -fn 'Iosevka SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
 super + p
-    dmenu_run -fn 'Iosevka Term SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
+    dmenu_run -fn 'Iosevka SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
 # Terminal
 super + Return
     alacritty
