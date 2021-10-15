@@ -26,34 +26,29 @@ super + ctrl + {m,x,y,z}
 
 # Launch Programs
 
-# Brave
+# Browser
 super + ctrl + b
     brave
-# PCManFM
-#super + ctrl + b
-#    pcmanfm
 # dmenu Launcher
-super + Tab
-    dmenu_run -fn 'Iosevka SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
 super + p
-    dmenu_run -fn 'Iosevka SS12' -nb '#3B4252' -nf '#8FBCBB' -sb '#81A1C1' -sf '#ECEFF4'
+    dmenu_run -fn 'FantasqueSansMono Nerd Font' -nb '#282828' -nf '#EBDBB2' -sb '#282828' -sf '#D79921'
 # Terminal
 super + Return
-    alacritty
+    kitty
 super + d
-    alacritty
+    kitty
 # Cmus
 super + ctrl + c
-    alacritty -e cmus
+    kitty -e cmus
 # Ranger
 super + ctrl + r
-    alacritty -e ranger
+    kitty -e ranger
 # NeoVim
 super + ctrl + v
-    alacritty -e nvim
+    kitty -e nvim
 # Emacs
-#super + ctrl + e
-#    emacs
+super + ctrl + e
+    emacs
 # Screenshot
 super + ctrl + s
     scrot
@@ -65,10 +60,10 @@ XF86AudioMute
     pulseaudio-ctl mute
 # Lower Volume
 XF86AudioLowerVolume
-    pulseaudio-ctl down 5
+    pulseaudio-ctl down 1
 # Raise Volume
 XF86AudioRaiseVolume
-    pulseaudio-ctl up 5
+    pulseaudio-ctl up 1
 # Play/Pause
 XF86AudioPlay
     playerctl play-pause

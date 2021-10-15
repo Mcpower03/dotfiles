@@ -16,15 +16,6 @@
 ;
 ;==========================================================
 
-[colors]
-background = #2E3440
-background-alt = #3B425200
-foreground = #ECEFF4
-foreground-alt = #2E3440
-primary = #A3BE8C
-secondary = #5E81AC
-alert = #BF616A
-
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -40,13 +31,13 @@ margin-bottom = 5
 ; vim:ft=dosini
 
 [bar/mainbar]
-monitor = "eDP-1"
-background = #652E34100
-foreground = #E5E9F0
-font-0 = Iosevka Term SS12:style=Medium:pixelsize=28;2
+monitor = "DP-0"
+background = #00282828
+foreground = #ebdbb2
+font-0 = FantasqueSansMono Nerd Font:style=Medium:pixelsize=13;2
 font-1 = Font Awesome 5 Free Solid:style=Regular:size=9;2
 font-2 = Font Awesome 5 Brands:style=Regular:size=13;2
-height = 50
+height = 20
 line-size = 2
 modules-left = bspwm
 modules-right = music pulseaudio battery network redshift datetime
@@ -55,31 +46,28 @@ module-margin = 1.5
 tray-position = right
 tray-maxsize = 16
 
-[module/apple]
-type = custom/text
-content =  
+#[module/apple]
+#type = custom/text
+#content =  
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %name%
-#label-focused-background = ${colors.background-alt}
-label-focused-underline= #ffffff
-label-focused-padding = 2
+label-focused-underline= #EBDBB2
+label-focused-padding = 1
 label-focused-font = 0
 
 label-occupied = %name%
-label-occupied-padding = 2
+label-occupied-padding = 1
 label-occupied-font = 0
 
 label-urgent = %name%!
-#label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 label-urgent-font = 0
 
 label-empty = %name%
-#label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 label-empty-font = 0
 ;extra icons to choose from
 ;http://fontawesome.io/cheatsheet/
@@ -154,7 +142,7 @@ label-volume =  %percentage%%
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels%
-label-muted =  muted
+label-muted = muted
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
@@ -162,7 +150,7 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 
 ; Right and Middle click
-click-right = alacritty -e pulsemixer
+click-right = kitty -e pulsemixer
 ; click-middle = 
 
 [module/network]
@@ -180,8 +168,3 @@ click-right = redshift -x
 [module/datetime]
 type = internal/date
 date = %a %b %d  %I:%M %p
-
-# [module/powermenu]
-# type = custom/text
-# content = 
-# click-left = rofi -show p -modi p:rofi-power-menu -font "Iosevka Term SS12 12" -width 20 -lines 6 --no-symbols

@@ -4,14 +4,14 @@ link="https://source.unsplash.com/random/"
 if [ -z ${XDG_CONFIG_HOME+x} ]; then
     XDG_CONFIG_HOME="${HOME}/.config"
 fi
-if [ -z ${XDG_CACHE_HOME+x} ]; then
-    XDG_CACHE_HOME="${HOME}/.cache"
+if [ -z ${XDG_HOME+x} ]; then
+    XDG_HOME="${HOME}"
 fi
 confdir="${XDG_CONFIG_HOME}/styli.sh"
 if [ ! -d "${confdir}" ]; then
     mkdir -p "${confdir}"
 fi
-cachedir="${XDG_CACHE_HOME}/styli.sh"
+cachedir="${XDG_HOME}/Pictures/wallpapers"
 if [ ! -d "${cachedir}" ]; then
     mkdir -p "${cachedir}"
 fi

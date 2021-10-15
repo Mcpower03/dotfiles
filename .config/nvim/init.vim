@@ -181,9 +181,9 @@ let g:gruvbox_contrast_light = 'soft'
 "Monokai Theme Settings
 let g:vim_monokai_tasty_italic = 1
 "Sets colorscheme
-colorscheme wal
+colorscheme gruvbox
 "Airline Colorscheme
-let g:airline_theme='base16_nord'
+let g:airline_theme='gruvbox'
 "Enables Rainbow Brackets
 let g:rainbow_active = 1
 

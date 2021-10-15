@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/mikec/.cache/styli.sh/wallpaper.jpg' 
+feh --no-fehbg --bg-scale '/home/mikec/Pictures/wallpapers/wallpaper.jpg' 
