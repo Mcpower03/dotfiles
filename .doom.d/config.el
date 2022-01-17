@@ -20,7 +20,7 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "FantasqueSansMono Nerd Font" :size 15 )
-       doom-variable-pitch-font (font-spec :family "Cantarell" :size 15))
+       doom-variable-pitch-font (font-spec :family "Cantarell" :size 15 :weight 'bold))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -52,3 +52,24 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Custom Config ;;
+
+;; fixes slow vterm performance (especially in cava)
+(setq vterm-timer-delay 0.001)
+
+;; deft directory & recursive search in that directory
+(setq deft-directory "~/notes")
+(setq deft-recursive t)
+;; set naming rules for deft
+(setq deft-org-mode-title-prefix t)
+(setq deft-file-naming-rules
+      '((noslash . "-")
+        (nospace . "-")
+        (case-fn . downcase)))
+
+;; enable tree-sitter
+(global-tree-sitter-mode)
+
+;; enable tree-sitter syntax highlighting
+(add-hook 'c-mode-hook #'tree-sitter-hl-mode)

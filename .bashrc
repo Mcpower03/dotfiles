@@ -154,4 +154,9 @@ alias ls='/usr/bin/exa'
 #alias grep='/usr/bin/rg'
 #alias find='/usr/bin/fd'
 alias mingw='/usr/bin/x86_64-w64-mingw32-gcc'
-EDITOR='nvim'
+EDITOR='kak'
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

@@ -50,3 +50,8 @@
 ;(unpin! t)
 
 ;; Custom Packages
+(package! tree-sitter)
+(package! tree-sitter-langs)
+(package! tree-sitter-indent)
+(package! evil-textobj-tree-sitter)
+(package! org-bullets)

@@ -4,13 +4,19 @@
 sxhkd &
 # polybar example &
 #~/.scripts/panel.sh
-killall polybar
-polybar mainbar &
+if [ $(pgrep polybar) ]; then
+	killall -q polybar && sleep .5 && polybar mainbar &
+else
+	sleep .5 && polybar mainbar &
+fi
 #MONITOR=DP-5 polybar example &
 ~/.fehbg
 picom &
-killall ibus-daemon
-ibus-daemon -drxR &
+if [ $(pgrep ibus-daemon) ]; then
+	killall -q ibus-daemon && ibus-daemon -drxR &
+else
+	ibus-daemon -drxR &
+fi
 lxsession &
 blueman-applet &
 nm-applet &

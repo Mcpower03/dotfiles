@@ -1,0 +1,74 @@
+add-highlighter global/ number-lines -relative -hlcursor
+add-highlighter global/ show-matching
+evaluate-commands %sh{
+        plugins="$kak_config/plugins"
+            mkdir -p "$plugins"
+                [ ! -e "$plugins/plug.kak" ] && \
+                        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+                            printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+plug "andreyorst/plug.kak" noload
+plug "kakoune-editor/kakoune-extra-filetypes"
+plug "andreyorst/fzf.kak"
+plug "kakounedotcom/prelude.kak"
+plug "kakounedotcom/connect.kak"
+plug "listentolist/kakoune-rainbow" domain "gitlab.com" config %{
+        require-module rainbow
+            # suggested mapping
+#     # map global user r ": rainbow<ret>" -docstring "rainbow brackets"
+#         # map global user R ": rmhl window/ranges_rainbow_specs<ret>" \
+#             #     -docstring "remove rainbow highlighter"
+}
+plug "occivink/kakoune-sudo-write"
+plug "kak-lsp/kak-lsp" do %{
+        cargo install --locked --force --path .
+}
+plug "basbebe/pandoc.kak" %{
+        # your config
+}
+plug "caksoylar/kakoune-smooth-scroll" config %{
+         # configuration here
+}
+plug "abuffseagull/kakoune-discord" do %{ cargo install --path . --force } %{
+      discord-presence-enable
+}
+# color themes
+plug "raiguard/one.kak"
+plug "dracula/kakoune"
+plug "abstractlyZach/nord.kak"
+
+colorscheme gruvbox-dark
+hook global WinCreate [^*].* %{
+        hook -once window WinDisplay .* %{
+                    smooth-scroll-enable
+                    rainbow
+        }
+}
+lsp-enable
+hook global WinSetOption filetype=(c|python) %{
+      hook window -group semantic-tokens BufReload .* lsp-semantic-tokens
+        hook window -group semantic-tokens NormalIdle .* lsp-semantic-tokens
+          hook window -group semantic-tokens InsertIdle .* lsp-semantic-tokens
+            hook -once -always window WinSetOption filetype=.* %{
+                    remove-hooks window semantic-tokens
+            }
+}
+face global InfoDefault               Information
+face global InfoBlock                 Information
+face global InfoBlockQuote            Information
+face global InfoBullet                Information
+face global InfoHeader                Information
+face global InfoLink                  Information
+face global InfoLinkMono              Information
+face global InfoMono                  Information
+face global InfoRule                  Information
+face global InfoDiagnosticError       Information
+face global InfoDiagnosticHint        Information
+face global InfoDiagnosticInformation Information
+face global InfoDiagnosticWarning     Information
+
+set-option global lsp_config %{
+        [language.python.settings._]
+ #       "pylsp.plugins.pycodestyle.enabled" = "false",
+#        "pylsp.plugins.pyflakes.enabled" = "false"
+}

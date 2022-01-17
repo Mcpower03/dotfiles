@@ -43,4 +43,4 @@ Run `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'` to install vim plug for Neovim
 And run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to set up vim plug for regular Vim
-Run ``git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`` for tmux plugin manager setup
+Run `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm` for tmux plugin manager setup
